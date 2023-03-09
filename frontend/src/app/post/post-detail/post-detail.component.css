@@ -1,0 +1,39 @@
+.detail-wrapper {
+  padding: 230px 230px;
+}
+
+.container {
+  width: 70%;
+  background-color: rgb(242, 242, 242);
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.post-title {
+  font-weight: 600px;
+}
+
+.author {
+  font-size: 32px;
+  margin: 0px;
+}
+
+.movie {
+  margin: 0px;
+}
+
+.star {
+  display: inline;
+  margin-bottom: 5px;
+}
+
+.evaluation {
+  border-bottom: 3px solid rgb(226, 226, 226);
+}
+
+.impression {
+  margin-top: 15px;
+  font-weight: 700;
+}
+
+

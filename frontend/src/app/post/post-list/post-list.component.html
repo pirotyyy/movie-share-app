@@ -1,0 +1,43 @@
+<div class="title-wrapper">
+  <div class="title-container">
+    <h1 class="title">POSTS</h1>
+  </div>
+</div>
+<div class="list-wrapper">
+  <div class="tiles">
+    <div *ngFor="let post of posts; let i = index">
+      <a [routerLink]="['/posts/detail', post.id]">
+        <div class="tile">
+          <div class="tile-top">
+            <h4 class="post-title">{{ post.post_title }}</h4>
+            <p class="author">{{ post.author }}</p>
+            <p class="movie">{{ post.movie }}</p>
+          </div>
+          <hr />
+          <div class="tile-main">
+            <div class="evaluations">
+              <div
+                *ngFor="
+                  let star of arrayNumberLength(post.evaluation);
+                  let i = index
+                "
+                class="evaluation"
+              >
+                <div
+                  class="material-symbols-outlined"
+                  style="color: rgb(224, 224, 0)"
+                >
+                  star
+                </div>
+              </div>
+            </div>
+            <br />
+            <div class="tile-text">
+              {{ post.impression }}
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

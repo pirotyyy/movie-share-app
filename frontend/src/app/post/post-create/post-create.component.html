@@ -1,0 +1,56 @@
+<div class="createform-wrapper">
+  <div class="container">
+    <h1 class="title">CREATE POST</h1>
+    <div class="form-wrapper">
+      <form (ngSubmit)="create()" [formGroup]="createForm">
+        <div class="input-wrapper">
+          <div class="input form-group">
+            <label for="posttitle">POST TITLE</label>
+            <input
+              id="posttitle"
+              type="text"
+              formControlName="post_title"
+              placeholder="ENTER POST TITLE"
+              required
+            />
+          </div>
+          <div class="input form-group">
+            <label for="author">AUTHOR</label>
+            <input id="author" type="text" formControlName="author" readonly />
+          </div>
+          <div class="input form-group">
+            <label for="movie">MOVIE TITLE</label>
+            <input
+              id="movie"
+              type="text"
+              formControlName="movie"
+              placeholder="ENTER MOVIE TITLE"
+              required
+            />
+          </div>
+          <div class="input form-group">
+            <label for="evaluation">EVALUATION</label>
+            <input
+              id="evaluation"
+              type="number"
+              formControlName="evaluation"
+              required
+            />
+          </div>
+          <div class="input form-group">
+            <label for="impression">IMPRESSION</label>
+            <textarea
+              id="impression"
+              cols="66"
+              rows="15"
+              formControlName="impression"
+              placeholder="ENTER YOUR IMPRESSION"
+              required
+            ></textarea>
+          </div>
+        </div>
+        <input value="SUBMIT" class="submit-btn" type="submit" />
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,63 @@
+<div class="editform-wrapper">
+  <div class="container">
+    <h1 class="title">EDIT POST</h1>
+    <div class="form-wrapper">
+      <form (ngSubmit)="update()" [formGroup]="editForm">
+        <div class="input-wrapper">
+          <div class="input form-group">
+            <label for="posttitle">POST TITLE</label>
+            <input
+              id="posttitle"
+              type="text"
+              formControlName="post_title"
+              required
+            />
+          </div>
+          <div class="input form-group">
+            <label for="author">AUTHOR</label>
+            <input id="author" type="text" formControlName="author" readonly />
+          </div>
+          <div class="input form-group">
+            <label for="movie">MOVIE TITLE</label>
+            <input
+              id="movie"
+              type="text"
+              formControlName="movie"
+              placeholder="ENTER MOVIE TITLE"
+              required
+            />
+          </div>
+          <div class="input form-group">
+            <label for="evaluation">EVALUATION</label>
+            <input
+              id="evaluation"
+              type="number"
+              formControlName="evaluation"
+              required
+            />
+          </div>
+          <div class="input form-group">
+            <label for="impression">IMPRESSION</label>
+            <textarea
+              id="impression"
+              cols="66"
+              rows="15"
+              formControlName="impression"
+              placeholder="ENTER YOUR IMPRESSION"
+              required
+            ></textarea>
+          </div>
+        </div>
+        <div class="btn-group">
+          <input
+            value="DELETE"
+            class="delete-btn"
+            type="submit"
+            (click)="delete()"
+          />
+          <input value="SUBMIT" class="submit-btn" type="submit" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

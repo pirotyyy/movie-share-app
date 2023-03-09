@@ -1,0 +1,53 @@
+<div class="login-wrapper">
+  <div class="container">
+    <h1 class="title">LOGIN</h1>
+    <div *ngIf="errors.length > 0" class="alert alert-danger">
+      <ul *ngFor="let error of errors">
+        <li>{{ error }}</li>
+      </ul>
+    </div>
+    <div class="form-wrapper">
+      <form (ngSubmit)="login()" [formGroup]="loginForm">
+        <div class="input-wrapper">
+          <div class="input input-username form-group">
+            <label for="username">USERNAME</label>
+            <input
+              id="username"
+              type="text"
+              formControlName="username"
+              placeholder="ENTER YOUR USERNAME"
+              required
+            />
+            <div
+              *ngIf="username.invalid && (username.dirty || username.touched)"
+              class="alert"
+            >
+              <div *ngIf="username.errors.required" style="color: red">
+                Requied Field
+              </div>
+            </div>
+          </div>
+          <div class="input input-password form-group">
+            <label for="password">PASSWORD</label>
+            <input
+              id="password"
+              type="password"
+              formControlName="password"
+              placeholder="ENTER YOUR PASSWORD"
+              required
+            />
+            <div
+              *ngIf="password.invalid && (password.dirty || password.touched)"
+              class="alert"
+            >
+              <div *ngIf="password.errors.required" style="color: red">
+                Requied Field
+              </div>
+            </div>
+          </div>
+        </div>
+        <input class="submit-btn" type="submit" value="SUBMIT" />
+      </form>
+    </div>
+  </div>
+</div>
