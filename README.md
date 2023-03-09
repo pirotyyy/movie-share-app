@@ -10,4 +10,5 @@ angular.js
 typescript
 
 ## 機能
-1
+1. 投稿のCRUD操作
+2. JWT認証による会員機能
